@@ -3,17 +3,23 @@
     padding: 0;
 }
 
-li, .dashboard {
+li, .dashboard, .title, .subject-line, .notification-section > p, .profile > p {
     font-weight: bold;
-    display: flex;
-    align-items: center;
 }
 
 li {
     list-style-type: none;
     margin-bottom: 15px;
-    font-weight: bold;
     gap: 15px;
+}
+
+li, .dashboard, .topper, .profile, .user, .notification-section, .buttons {
+    display: flex;
+    align-items: center;
+}
+
+.topper, .profile, .user, .notification-section, .buttons {
+    gap: 20px;
 }
 
 .dashboard {
@@ -41,7 +47,9 @@ li {
 .header {
     grid-column: 2;
     grid-row: 1;
-    padding: 20px;
+    padding: 30px 40px;
+    display: grid;
+    gap: 15px;
 }
 
 .space-bar {
@@ -49,6 +57,14 @@ li {
     width: 600px;
     height: 30px;
     border-radius: 20px;
+}
+
+.notification-section, .buttons {
+    margin-left: auto;
+}
+
+.name {
+    font-size: 20px;
 }
 
 button {
@@ -72,9 +88,7 @@ button {
 }
 
 .project-title, .announcement-title, .trending-title {
-    font-weight: bold;
-    font-size: large;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
 
 .project-section {
@@ -93,18 +107,18 @@ button {
     background-color: #ffffff;
     width: 20rem;
     padding: 20px;
-    border: 8px solid;
     border-radius: 5px;
-    border-color: #ffffff #ffffff #ffffff #f0b429;
-}
-
-.title, .subject-line {
-    font-weight: bold;
+    border-left: 8px solid #f0b429;
+    min-height: 180px;
+    position: relative;
 }
 
 .icon-wrapper {
     display: flex;
     gap: 20px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
 }
 
 .user-avatar {
@@ -116,13 +130,10 @@ button {
     grid-row: 1;
 }
 
-.announcement-content {
-    display: grid;
-    gap: 20px;
-    background-color: #ffffff;
-    width: 15rem;
-    padding: 20px;
-    border-radius: 5px;
+.line-one, .line-two {
+    background-color: #e2e8f0;
+    width: 200px;
+    height: 2px;
 }
 
 .trending-section {
@@ -130,17 +141,11 @@ button {
     grid-row: 2;
 }
 
-.trending-content {
+.announcement-content, .trending-content {
     display: grid;
     gap: 20px;
     background-color: #ffffff;
     width: 15rem;
     padding: 20px;
     border-radius: 5px;
-}
-
-.user {
-    display: flex;
-    align-items: center;
-    gap: 20px;
 }
